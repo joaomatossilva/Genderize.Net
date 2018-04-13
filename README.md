@@ -2,8 +2,8 @@ Genderize.Net
 ===================
 [https://genderize.io/](https://genderize.io/)
 
-[![NuGet Version](http://img.shields.io/nuget/v/Genderize.Net.svg?style=flat)](https://www.nuget.org/packages/Genderize.Net/) 
-[![MyGet Pre Release](https://img.shields.io/myget/genderizedotnet/vpre/Genderize.Net.svg)](https://www.myget.org/feed/genderizedotnet/package/nuget/Genderize.Net)
+[![NuGet Version](http://img.shields.io/nuget/v/Genderize.svg?style=flat)](https://www.nuget.org/packages/Genderize/) 
+[![MyGet Pre Release](https://img.shields.io/myget/genderizedotnet/vpre/Genderize.svg)](https://www.myget.org/feed/genderizedotnet/package/nuget/Genderize)
 [![AppVeyor](https://img.shields.io/appveyor/ci/kappy/genderize-net.svg)](https://ci.appveyor.com/project/kappy/genderize-net)
 [![GitHub contributors](https://img.shields.io/github/contributors/joaomatossilva/Genderize.Net.svg)](https://github.com/joaomatossilva/Genderize.Net)
 
