@@ -13,23 +13,26 @@ namespace Genderize
     {
         public static JsonSerializerSettings SerializerSettings { get; }
         private const string Url = "https://api.genderize.io/";
-        private readonly HttpClient _innerClient;
+        private static readonly HttpClient DefaultInnerClient;
+
+        private readonly HttpClient _httpClient;
 
         static GenderizeClient()
         {
+            DefaultInnerClient = new HttpClient();
             SerializerSettings = new JsonSerializerSettings
             {
                 ContractResolver = new CamelCasePropertyNamesContractResolver()
             };
         }
 
-        public GenderizeClient() : this(new HttpClientHandler())
+        public GenderizeClient() : this(DefaultInnerClient)
         {
         }
 
-        public GenderizeClient(HttpClientHandler handler)
+        public GenderizeClient(HttpClient httpClient)
         {
-            _innerClient = new HttpClient(handler);
+            _httpClient = httpClient;
         }
 
         public async Task<NameGender> GetNameGender(
@@ -50,11 +53,11 @@ namespace Genderize
             }
             if (!string.IsNullOrEmpty(language))
             {
-                queryValues.Add("language_id", country);
+                queryValues.Add("language_id", language);
             }
 
             var uri = new Uri(Url + ToQueryString(queryValues));
-            var result = await _innerClient.GetStringAsync(uri)
+            var result = await _httpClient.GetStringAsync(uri)
                 .ConfigureAwait(false);
 
             //TODO hande fail cases
