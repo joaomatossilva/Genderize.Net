@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27428.2015
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genderize", "src\Genderize\Genderize.csproj", "{53C838CC-F41F-45B3-A02B-406CB2F2F915}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = ".build", "build\.build.csproj", "{453B0778-4C4E-4D88-AE79-10970CFAA080}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Genderize", "src\Genderize\Genderize.csproj", "{53C838CC-F41F-45B3-A02B-406CB2F2F915}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0D7C2A1C-7475-434C-B167-D2AFF0FB0614}"
 EndProject
@@ -11,12 +13,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Genderize.Tests", "tests\Ge
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{92F70248-9B2E-41DB-9E39-518E01C3BFEB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build_stuff", "build_stuff", "{1FF30B8A-DD30-43F0-99F0-3B0CC7399F7E}"
+	ProjectSection(SolutionItems) = preProject
+		appveyor.yml = appveyor.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{453B0778-4C4E-4D88-AE79-10970CFAA080}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{453B0778-4C4E-4D88-AE79-10970CFAA080}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53C838CC-F41F-45B3-A02B-406CB2F2F915}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{53C838CC-F41F-45B3-A02B-406CB2F2F915}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53C838CC-F41F-45B3-A02B-406CB2F2F915}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -30,6 +39,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{453B0778-4C4E-4D88-AE79-10970CFAA080} = {1FF30B8A-DD30-43F0-99F0-3B0CC7399F7E}
 		{53C838CC-F41F-45B3-A02B-406CB2F2F915} = {92F70248-9B2E-41DB-9E39-518E01C3BFEB}
 		{9533FC04-B782-4CCB-B894-0030A7A16DAF} = {0D7C2A1C-7475-434C-B167-D2AFF0FB0614}
 	EndGlobalSection

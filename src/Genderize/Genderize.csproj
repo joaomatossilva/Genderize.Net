@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard1.1;net45</TargetFrameworks>
+    <AssemblyVersion>0.8.0.0</AssemblyVersion>
+    <FileVersion>0.8.0.0</FileVersion>
+    <Version>0.8.0</Version>
+    <PackageTags>genderize api wrapper gender</PackageTags>
+    <PackageProjectUrl>https://github.com/joaomatossilva/Genderize.Net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/joaomatossilva/Genderize.Net</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Description>A client wrapper for the genderize.io API - Genderize.io determines the gender of a first name</Description>
   </PropertyGroup>
 
   <ItemGroup>
