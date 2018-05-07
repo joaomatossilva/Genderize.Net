@@ -99,7 +99,7 @@ namespace Genderize
 			}
 
 
-			switch (httpResult.StatusCode)
+            switch (httpResult.StatusCode)
 			{
 				case System.Net.HttpStatusCode.BadRequest:
 					throw new BadRequestException(errorData.Error);
