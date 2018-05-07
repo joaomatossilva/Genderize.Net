@@ -102,11 +102,11 @@ namespace Genderize
 			switch (httpResult.StatusCode)
 			{
 				case System.Net.HttpStatusCode.BadRequest:
-					throw new BadRequestException(content);
+					throw new BadRequestException(errorData.Error);
 				case (System.Net.HttpStatusCode) 429: // too many reqeusts
-					throw new TooManyRequestsException(content);
+					throw new TooManyRequestsException(errorData.Error);
 				case System.Net.HttpStatusCode.InternalServerError:
-					throw new InternalServerErrorException(content);
+					throw new InternalServerErrorException(errorData.Error);
 				default:
 					throw new GeneralHttpException($"Unexpected Status code: {httpResult.StatusCode}");
 			}
