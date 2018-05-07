@@ -118,5 +118,22 @@ namespace Genderize.Tests
             Assert.AreEqual(156, result.Count);
             Assert.AreEqual("Test", result.Name);
         }
+
+        [Test]
+        public async Task CanHandleNullReturns()
+        {
+            var mockHttp = new MockHttpMessageHandler();
+            mockHttp.When("https://api.genderize.io/")
+                .WithQueryString("name", "hippopotamus")
+                .Respond("application/json", "{\"name\":\"hippopotamus\",\"gender\":null}");
+            var httpClient = mockHttp.ToHttpClient();
+
+            var client = new GenderizeClient(httpClient);
+            var result = await client.GetNameGender("hippopotamus")
+                .ConfigureAwait(false);
+
+            Assert.IsNull(result.Gender);
+            Assert.AreEqual("hippopotamus", result.Name);
+        }
     }
 }
