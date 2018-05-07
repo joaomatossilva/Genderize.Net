@@ -1,7 +1,7 @@
 ﻿namespace Genderize.Exceptions
 {
-	internal class ErrorData
+    internal class ErrorData
     {
-		public string Error { get; set; }
+        public string Error { get; set; }
     }
 }
