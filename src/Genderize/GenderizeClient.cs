@@ -40,6 +40,7 @@ namespace Genderize
             string name,
             string country = null,
             string language = null,
+            string apikey = null,
             CancellationToken cancellationToken = default(CancellationToken))
         {
             if (string.IsNullOrEmpty(name))
@@ -55,6 +56,10 @@ namespace Genderize
             if (!string.IsNullOrEmpty(language))
             {
                 queryValues.Add("language_id", language);
+            }
+            if (!string.IsNullOrEmpty(apikey))
+            {
+                queryValues.Add("apikey", apikey);
             }
 
             var uri = new Uri(Url + ToQueryString(queryValues));
